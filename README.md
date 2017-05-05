@@ -7,7 +7,7 @@ This tutorial considers that you already have an AWS Elastic LoadBalancer config
 * Go to your [AWS Management Console](https://console.aws.amazon.com/console/home)
 * Go to your EC2 management console
 * In the left panel, click on **Load Balancers** under *LOAD BALANCING*
-* Select yout load balancer
+* Select your load balancer
 * On the very bottom of the *Description* tab, click the last button
 * Check the **Enable access logs** checkbox
 * Give your bucket an unique name
@@ -75,7 +75,7 @@ This image does not require any high cpu or ram amount to run, as it's only comp
 ### Basic
 Once the container is fully launched, you can access it using `http://<host>`.
 
-### Using the aut-reload feature
+### Using the auto-reload feature
 The auto-reload feature reloads automatically the page at regular intervals. To use it, simply go to `http://<host>/?r=<interval>` where interval is the number of seconds between each reload.
 
 ## Building the image

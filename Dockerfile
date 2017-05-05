@@ -32,4 +32,6 @@ ADD custom.js /var/www/html
 # Add waiting file
 RUN echo "Please wait while reports are generating, you will be redirected automatically... <script>setTimeout(() => { window.location.reload(); }, 10000)</script>" > /var/www/html/index.html
 
+EXPOSE 80
+
 CMD ["/root/start.sh"]
