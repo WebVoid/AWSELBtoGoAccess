@@ -41,7 +41,7 @@ The following environment variables are required for running this container:
 * **S3_LINK**: this is the link S3cmd will use to fetch your log files. It's format looks like `s3://<Bucket>/<Prefix>/AWSLogs/<account_id>/elasticloadbalancing/<region>`, where the *Bucket* is the Bucket in which you configured your ELB to store your log files, *Prefix* is mandatory, *account_id* is the id of the account owning the ELB (you can go to your S3 Bucket and check it out) and *region* is mandatory. In fact you could stop at the `s3://<Bucket>/<Prefix>/` but we recommand at least going down to the `elasticloadbalancing` folder.
 
 ### Installing on your own host
-* Get the image by running a `docker pull <image>`
+* Get the image by running a `docker pull webvoid/awselbtogoaccess:latest`
 * Put yourself in the folder where you want to keep your log files persistent
 * Run the following command:
 ```
@@ -54,7 +54,7 @@ docker run \
         -e HTTP_PASSWD="<password_for_http_basic_auth>" \
         -e REFRESH_DELAY="<server_refresh_delay_in_seconds>" \
         -e S3_LINK="<your_s3_bucket_link>" \
-        <image>
+        webvoid/awselbtogoaccess:latest
 ```
 
 ### Installing using a container service (like [Google Cloud](https://cloud.google.com/) or [AWS ECS](https://aws.amazon.com/fr/documentation/ecs/))
